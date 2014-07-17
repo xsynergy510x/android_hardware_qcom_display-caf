@@ -1343,7 +1343,7 @@ void setMdpFlags(hwc_layer_1_t *layer,
     }
 }
 
-inline int configRotator(Rotator *rot, Whf& whf,
+int configRotator(Rotator *rot, Whf& whf,
         const Whf& origWhf, const eMdpFlags& mdpFlags,
         const eTransform& orient,
         const int& downscale) {
@@ -1403,7 +1403,7 @@ bool setupBasePipe(hwc_context_t *ctx) {
 }
 
 
-inline int configMdp(Overlay *ov, const PipeArgs& parg,
+int configMdp(Overlay *ov, const PipeArgs& parg,
         const eTransform& orient, const hwc_rect_t& crop,
         const hwc_rect_t& pos, const MetaData_t *metadata,
         const eDest& dest) {
@@ -1429,7 +1429,7 @@ inline int configMdp(Overlay *ov, const PipeArgs& parg,
     return 0;
 }
 
-inline void updateSource(eTransform& orient, Whf& whf,
+void updateSource(eTransform& orient, Whf& whf,
         hwc_rect_t& crop) {
     Dim srcCrop(crop.left, crop.top,
             crop.right - crop.left,
